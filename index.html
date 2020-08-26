@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Go Cosmic Blog</title>
+  <meta name="description" content="Go Cosmic Blog">
+  <meta name="author" content="Cosmic">
+  <style>
+    body {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: left;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>
+      Go Cosmic Blog
+    </h1>
+    {{if not .Objects}}
+      <h2>No post found</h2>
+    {{end}}
+    {{range .Objects}}
+    <article>
+      <h3>{{ .Title }}</h3>
+      <img alt="{{.Title}}" src="{{.Metadata.Hero.ImgixURL}}?w=400"/>
+      {{.Content}}
+    </article>
+    {{end}}
+  </div>
+</body>
+
+</html>
