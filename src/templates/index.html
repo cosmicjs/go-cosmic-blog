@@ -1,0 +1,22 @@
+{{template "head"}}
+  {{template "header"}}
+  <section class="container mx-auto px-4 py-12 max-w-5xl">
+    {{if .Objects}}
+      <div class="grid grid-cols-3 gap-6 gap-y-12">
+        {{range .Objects}}
+        <article>
+          <div class="h-48 rounded-sm bg-gray-500" style="background-image: url({{.Metadata.Hero.ImgixURL}}?w=400)">
+          </div>
+          <h2 class="text-black text-lg font-semibold mt-2">
+            <a href="/{{.Slug}}">{{ .Title }}</a>
+          </h2>
+          <p class="mt-2 text-gray-600">{{.Metadata.Description}}</p>
+          <div class="mt-1"><time class="text-gray-400 font-semibold">{{.CreatedAt.Format "02 Jan 2006"}}</time></div>
+        </article>
+        {{end}}
+      </div>
+    {{else}}
+      <h2>No post found</h2>
+    {{end}}
+  </section>
+{{template "footer"}}

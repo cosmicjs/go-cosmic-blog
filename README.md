@@ -10,6 +10,7 @@
 
 ``` bash
 go mod download
+npm install
 ```
 
 ## Configuration
@@ -26,7 +27,11 @@ add `BUCKET_SLUG` & `READ_KEY` if required
 
 ``` bash
 # Then you can run it by
-go run app.go
+npm start
+```
+> Or you can build your application using
+```bash
+npm run build
 ```
 
 then navigate to [https://localhost:8080](https://localhost:8080) to access your application

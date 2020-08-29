@@ -1,0 +1,14 @@
+{{define "header"}}
+{{if .}}
+<header class="bg-blue-700 h-16 px-4 flex flex-col justify-center text-center">
+  <h1 class="text-white text-2xl font-semibold">
+    <a href="/">gosmic</a>
+  </h1>
+</header>
+{{else}}
+<header class="bg-blue-700 h-64 px-4 flex flex-col justify-center text-center">
+  <h1 class="text-white text-5xl font-semibold">gosmic</h1>
+  <p class="text-white mt-2">Blog starter created with Go and powered by Cosmic Headless CMS</p>
+</header>
+{{end}}
+{{end}}

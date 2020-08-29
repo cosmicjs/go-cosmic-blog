@@ -1,0 +1,31 @@
+{{$isPost := false}}
+{{$title := "404"}}
+{{$isSingle := true}}
+{{if and .Object .Object.Slug}}
+  {{$isPost = true}}
+  {{$title = .Object.Title}}
+{{end}}
+{{template "head" (print $title " | ")}}
+  {{template "header" $isSingle}}
+  <section class="container mx-auto px-4 py-12 mt-8 max-w-5xl">
+    {{if $isPost}}
+    <article>
+      <div class="mx-32">
+        <a class="underline" href="/">← Back to Posts</a>
+        <h2 class="text-4xl font-semibold mt-2">{{ .Object.Title }}</h2>
+        <h3 class="text-lg mt-2 text-gray-600">{{ .Object.Metadata.Description }}</h3>
+        <div class="mt-6">
+          <hr class="mb-2">
+          <time class="text-gray-400 font-semibold">{{.Object.CreatedAt.Format "02 Jan 2006"}}</time>
+        </div>
+      </div>
+      <img class="mt-6 rounded-sm" alt="{{.Object.Title}}" src="{{.Object.Metadata.Hero.ImgixURL}}?w=1200"/>
+      <div class="markdown mt-10 mx-32">
+        {{ .Object.Content }}
+      </div>
+    </article>
+    {{else}}
+    <h2>No post found</h2>
+    {{end}}
+  </section>
+{{template "footer"}}
