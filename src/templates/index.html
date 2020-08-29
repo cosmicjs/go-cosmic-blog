@@ -5,8 +5,10 @@
       <div class="grid grid-cols-3 gap-6 gap-y-12">
         {{range .Objects}}
         <article>
-          <div class="h-48 rounded-sm bg-gray-500" style="background-image: url({{.Metadata.Hero.ImgixURL}}?w=400)">
-          </div>
+          <a href="/{{.Slug}}">
+            <div class="h-48 rounded-sm bg-gray-500" style="background-image: url({{.Metadata.Hero.ImgixURL}}?w=400)">
+            </div>
+          </a>
           <h2 class="text-black text-lg font-semibold mt-2">
             <a href="/{{.Slug}}">{{ .Title }}</a>
           </h2>
