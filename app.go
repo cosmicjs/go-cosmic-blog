@@ -24,7 +24,7 @@ func main() {
 	r.HandleFunc("/{slug}", handlers.Single).Methods("GET")
 
 	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file")
+		log.Println("Error loading .env file")
 	}
 
 	port := utils.GetPortEnv()
