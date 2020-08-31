@@ -1,0 +1,28 @@
+name: Production Deployment
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+    - name: Install Dependencies
+      run: |
+        npm install
+    - name: Compile CSS
+      run: |
+        npm run build:css
+      env:
+        NODE_ENV: production
+    - uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+        heroku_email: ${{secrets.HEROKU_EMAIL}}
