@@ -10,6 +10,7 @@
 
 ``` bash
 go mod download
+go get github.com/cespare/reflex
 npm install
 ```
 

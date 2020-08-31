@@ -21,3 +21,4 @@ vendor/
 
 # node
 node_modules
+static/styles/main.css
