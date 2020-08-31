@@ -28,5 +28,5 @@ jobs:
         heroku_email: ${{secrets.HEROKU_EMAIL}}
         branch: "master"
       env:
-        BUCKET_SLUG: ${{secrets.BUCKET_SLUG}}
-        READ_KEY: ${{secrets.READ_KEY}}
+        HD_BUCKET_SLUG: ${{secrets.BUCKET_SLUG}}
+        HD_READ_KEY: ${{secrets.READ_KEY}}
