@@ -2,11 +2,11 @@
   {{template "header"}}
   <section class="container mx-auto px-4 py-12 max-w-5xl">
     {{if .Objects}}
-      <div class="grid grid-cols-3 gap-6 gap-y-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12">
         {{range .Objects}}
         <article>
           <a href="/{{.Slug}}">
-            <div class="h-48 rounded-sm bg-gray-500" style="background-image: url({{.Metadata.Hero.ImgixURL}}?w=400)">
+            <div class="h-64 sm:h-56 lg:h-48 rounded-sm bg-gray-500 bg-cover" style="background-image: url({{.Metadata.Hero.ImgixURL}}?w=400)">
             </div>
           </a>
           <h2 class="text-black text-lg font-semibold mt-2">

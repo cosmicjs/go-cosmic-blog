@@ -10,7 +10,7 @@
   <section class="container mx-auto px-4 py-12 mt-8 max-w-5xl">
     {{if $isPost}}
     <article>
-      <div class="mx-32">
+      <div class="mx-0 sm:mx-16 md:mx-32">
         <a class="underline" href="/">← Back to Posts</a>
         <h2 class="text-4xl font-semibold mt-2">{{ .Object.Title }}</h2>
         <h3 class="text-lg mt-2 text-gray-600">{{ .Object.Metadata.Description }}</h3>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <img class="mt-6 rounded-sm" alt="{{.Object.Title}}" src="{{.Object.Metadata.Hero.ImgixURL}}?w=1200"/>
-      <div class="markdown mt-10 mx-32">
+      <div class="markdown mt-10 mx-0 sm:mx-16 md:mx-32">
         {{ .Object.Content }}
       </div>
     </article>
