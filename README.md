@@ -1,4 +1,5 @@
 # Go + Cosmic
+![Image](https://imgix.cosmicjs.com/5de4e840-ec6b-11ea-a61c-9d54bbbbeb4a-go-cosmic-blog.png?w=1200&auto=format)
 
 > This repo contains an example blog starter that is built with [Go](https://golang.org/), and [Cosmic](https://www.cosmicjs.com).
 
