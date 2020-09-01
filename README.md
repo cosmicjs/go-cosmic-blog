@@ -2,6 +2,8 @@
 
 > This repo contains an example blog starter that is built with [Go](https://golang.org/), and [Cosmic](https://www.cosmicjs.com).
 
+> [See live demo hosted on Heroku](https://go-cosmic-blog.herokuapp.com/)
+
 ## Prerequisites
 
 - Go (I recommend using v1.15 or higher)
@@ -28,6 +30,8 @@ add `BUCKET_SLUG` & `READ_KEY` if required
 
 ``` bash
 # Then you can run it by
+# Note: this command will only run on OSX and Linux. As reflex utility is only compatible on these platforms.
+# On windows, you can run the application using `go run app.go` 
 npm start
 ```
 > Or you can build your application using
