@@ -40,4 +40,4 @@ npm start
 npm run build
 ```
 
-then navigate to [https://localhost:8080](https://localhost:8080) to access your application
+then navigate to [http://localhost:8080](http://localhost:8080) to access your application
